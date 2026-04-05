@@ -33,7 +33,7 @@ def create_app():
     from routes.patient_routes import patient_bp
     from routes.user_routes import user_bp
     from routes.appointment_routes import appointment_bp
-    # from routes.medical_record_routes import medical_record_bp
+    from routes.medical_record_routes import medical_record_bp
     # from routes.lab_test_routes import lab_test_bp
     # from routes.department_routes import department_bp
 
@@ -41,7 +41,7 @@ def create_app():
     app.register_blueprint(patient_bp,         url_prefix='/api/patients')
     app.register_blueprint(user_bp,            url_prefix='/api/users')
     app.register_blueprint(appointment_bp,     url_prefix='/api/appointments')
-    # app.register_blueprint(medical_record_bp,  url_prefix='/api/medical-records')
+    app.register_blueprint(medical_record_bp,  url_prefix='/api/medical-records')
     # app.register_blueprint(lab_test_bp,        url_prefix='/api/lab-tests')
     # app.register_blueprint(department_bp,      url_prefix='/api/departments')
 
